@@ -1,0 +1,62 @@
+﻿@page
+@model CarBooking.Pages.Booking.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Car Booking </h2>
+        <img src="~/images/car3.png" alt="Microsoft Azure" class="img-responsive" />
+        <ul>
+            <li>  Find It Cheaper And We'll Beat It. No Cancellation or Amendment Fees! No Credit Card Fees. We Speak Your Language. Unbeatable Prices. Types: Economy, Mini, Compact, Premium.</li>
+            <li>
+                Find Joy on The Perfect Kiwi Road Trip and Earn Airpoints Along the way. Great Service & Range of Cars to Choose From. Book Your Car with Avis Today. Unlimited kms.
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+
+</div>
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>BookingCars</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingCars.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookingCars.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingCars.Contact)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookingCars.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingCars.CarModel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookingCars.CarModel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingCars.BookingDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookingCars.BookingDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BookingCars.id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,63 @@
+﻿@page
+@model CarBooking.Pages.CarRecord.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Car Booking </h2>
+        <img src="~/images/car3.png" alt="Microsoft Azure" class="img-responsive" />
+        <ul>
+            <li>  Find It Cheaper And We'll Beat It. No Cancellation or Amendment Fees! No Credit Card Fees. We Speak Your Language. Unbeatable Prices. Types: Economy, Mini, Compact, Premium.</li>
+            <li>
+                Find Joy on The Perfect Kiwi Road Trip and Earn Airpoints Along the way. Great Service & Range of Cars to Choose From. Book Your Car with Avis Today. Unlimited kms.
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+
+</div>
+
+
+<h1>Create</h1>
+
+<h4>Car</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Car.CarName" class="control-label"></label>
+                <input asp-for="Car.CarName" class="form-control" />
+                <span asp-validation-for="Car.CarName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.CarModel" class="control-label"></label>
+                <input asp-for="Car.CarModel" class="form-control" />
+                <span asp-validation-for="Car.CarModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Price" class="control-label"></label>
+                <input asp-for="Car.Price" class="form-control" />
+                <span asp-validation-for="Car.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

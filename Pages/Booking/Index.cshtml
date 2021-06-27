@@ -1,0 +1,74 @@
+﻿@page
+@model CarBooking.Pages.Booking.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Car Booking </h2>
+        <img src="~/images/car3.png" alt="Microsoft Azure" class="img-responsive" />
+        <ul>
+            <li>  Find It Cheaper And We'll Beat It. No Cancellation or Amendment Fees! No Credit Card Fees. We Speak Your Language. Unbeatable Prices. Types: Economy, Mini, Compact, Premium.</li>
+            <li>
+                Find Joy on The Perfect Kiwi Road Trip and Earn Airpoints Along the way. Great Service & Range of Cars to Choose From. Book Your Car with Avis Today. Unlimited kms.
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+       
+    </div>
+
+</div>
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingCars[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingCars[0].Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingCars[0].CarModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingCars[0].BookingDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.BookingCars)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingDate)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

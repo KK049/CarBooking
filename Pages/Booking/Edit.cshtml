@@ -1,0 +1,69 @@
+﻿@page
+@model CarBooking.Pages.Booking.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Car Booking </h2>
+        <img src="~/images/car3.png" alt="Microsoft Azure" class="img-responsive" />
+        <ul>
+            <li>  Find It Cheaper And We'll Beat It. No Cancellation or Amendment Fees! No Credit Card Fees. We Speak Your Language. Unbeatable Prices. Types: Economy, Mini, Compact, Premium.</li>
+            <li>
+                Find Joy on The Perfect Kiwi Road Trip and Earn Airpoints Along the way. Great Service & Range of Cars to Choose From. Book Your Car with Avis Today. Unlimited kms.
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+
+</div>
+
+<h1>Edit</h1>
+
+<h4>BookingCars</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BookingCars.id" />
+            <div class="form-group">
+                <label asp-for="BookingCars.Name" class="control-label"></label>
+                <input asp-for="BookingCars.Name" class="form-control" />
+                <span asp-validation-for="BookingCars.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingCars.Contact" class="control-label"></label>
+                <input asp-for="BookingCars.Contact" class="form-control" />
+                <span asp-validation-for="BookingCars.Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingCars.CarModel" class="control-label"></label>
+                <input asp-for="BookingCars.CarModel" class="form-control" />
+                <span asp-validation-for="BookingCars.CarModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingCars.BookingDate" class="control-label"></label>
+                <input asp-for="BookingCars.BookingDate" class="form-control" />
+                <span asp-validation-for="BookingCars.BookingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

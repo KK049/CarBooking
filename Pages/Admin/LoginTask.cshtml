@@ -1,0 +1,42 @@
+﻿@page
+@model CarBooking.Pages.Admin.LoginTaskModel
+@{
+}
+
+<style>
+    .center {
+    background-color:darksalmon;
+    margin:auto;
+    }
+    
+
+
+</style>
+
+
+<h4>Login</h4>
+<hr />
+<div class="row">
+    
+        <div class="col-md-4 center">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Login.Email" class="control-label"></label>
+                    <input asp-for="Login.Email" class="form-control" />
+                    <span asp-validation-for="Login.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Login.Password" class="control-label"></label>
+                    <input asp-for="Login.Password" class="form-control" />
+                    <span asp-validation-for="Login.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+    
+    
+</div>

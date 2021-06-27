@@ -1,0 +1,25 @@
+﻿@page
+@model CarBooking.Pages.CarRecord.viewCardModel
+@{
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model.Car)
+        {
+        <div>
+            <h1 class="text-center">@Html.DisplayFor(modelItem => item.CarName)</h1>
+            
+            <h2>@Html.DisplayFor(modelItem => item.CarModel)</h2>    
+     
+            <P class="btn btn-danger">@Html.DisplayFor(modelItem => item.Price) </P>
+     
+        </div>
+        }
+
+        </div>
+
+</div>
+    
